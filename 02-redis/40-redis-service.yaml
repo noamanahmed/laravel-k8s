@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: laravel-k8s-redis
+spec:
+  clusterIP: None
+  ports:
+  - port: 6379
+    targetPort: 6379
+    name: laravel-k8s-redis
+  selector:
+    app: laravel-k8s-redis
